@@ -1,0 +1,33 @@
+output
+Using device: cuda
+
+=== Running: underfit ===
+/usr/local/lib/python3.12/dist-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.1 and num_layers=1
+  warnings.warn(
+Epoch 1/3 | Train Loss=5.728 PPL=307.47 | Val Loss=5.426 PPL=227.19
+Epoch 2/3 | Train Loss=4.865 PPL=129.71 | Val Loss=5.176 PPL=176.91
+Epoch 3/3 | Train Loss=4.485 PPL=88.68 | Val Loss=5.162 PPL=174.58
+Final Test Loss=5.903, Test PPL=366.31
+
+=== Running: overfit ===
+Epoch 1/8 | Train Loss=6.278 PPL=532.61 | Val Loss=6.245 PPL=515.64
+Epoch 2/8 | Train Loss=4.652 PPL=104.77 | Val Loss=6.866 PPL=959.07
+Epoch 3/8 | Train Loss=3.293 PPL=26.93 | Val Loss=8.476 PPL=4799.24
+Epoch 4/8 | Train Loss=2.348 PPL=10.46 | Val Loss=10.100 PPL=24344.78
+Epoch 5/8 | Train Loss=1.670 PPL=5.31 | Val Loss=11.595 PPL=108599.45
+Epoch 6/8 | Train Loss=1.185 PPL=3.27 | Val Loss=12.837 PPL=375734.56
+Epoch 7/8 | Train Loss=0.850 PPL=2.34 | Val Loss=13.742 PPL=929010.63
+Epoch 8/8 | Train Loss=0.634 PPL=1.88 | Val Loss=14.505 PPL=1992093.38
+Final Test Loss=16.166, Test PPL=10488910.38
+
+=== Running: best_fit ===
+/usr/local/lib/python3.12/dist-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(
+Epoch 1/5 | Train Loss=3.779 PPL=43.76 | Val Loss=5.879 PPL=357.47
+Epoch 2/5 | Train Loss=1.259 PPL=3.52 | Val Loss=7.892 PPL=2676.01
+Epoch 3/5 | Train Loss=0.623 PPL=1.86 | Val Loss=9.141 PPL=9326.82
+Epoch 4/5 | Train Loss=0.452 PPL=1.57 | Val Loss=10.010 PPL=22255.66
+Epoch 5/5 | Train Loss=0.377 PPL=1.46 | Val Loss=10.710 PPL=44779.86
+Final Test Loss=12.123, Test PPL=183987.56
+
+png images are upoaded as files in git
